@@ -1,12 +1,13 @@
 import Image from "next/image"
 import heroBackground from '@/app/heroBackground.jpg'
-import HeroContent from "./HeroContent";
+import SectionContent from "@/shared/components/SectionContent";
+import TornDivider from "@/shared/components/TornDivider";
 
 const Background = () => {
-    return (
-         <section
+  return (
+    <section
       id="home"
-      className="relative min-h-screen w-full overflow-hidden"
+      className="relative min-h-screen w-full overflow-visible"
     >
       {/* Background image */}
       <Image
@@ -36,10 +37,18 @@ const Background = () => {
 
       {/* Content */}
       <div className="relative z-10">
-        <HeroContent />
+        <SectionContent
+          tag="Christmas Collection 2026"
+          title="Christmas magic starts here"
+          description="Discover a magical collection of festive decorations,
+                cozy winter essentials, and timeless holiday gifts
+                crafted to make every celebration unforgettable.  "
+          buttonText="See Collection"
+        />
       </div>
+      <TornDivider />
     </section>
-    )
+  )
 };
 
 export default Background;
