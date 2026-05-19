@@ -1,10 +1,12 @@
 import SectionContent from "@/shared/components/SectionContent";
 import Image from "next/image";
 import christmasImage from "@/app/aboutImage.jpg"
+import TornDivider from "@/shared/components/TornDivider";
+import divider from "@/app/46.png";
 
 const About = () => {
     return (
-        <section id="about" className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#07150d] via-[#0f2b1d] to-[#041109]" >
+        <section id="about" className="relative min-h-screen overflow-visible bg-gradient-to-br from-[#07150d] via-[#0f2b1d] to-[#041109]" >
             <div
                 className=" absolute top-0 right-0 h-[800px] w-[500px] rounded-full bg-green-400/20 blur-3xl"
             />
@@ -12,7 +14,7 @@ const About = () => {
                 <SectionContent
                     tag="- About Us"
                     title="Tradition, love, happiness"
-                    description="More than 10 years sharing..."
+                    description="For more than 10 years we’ve been sharing the magic of Christmas through carefully crafted decorations, warm traditions, and timeless holiday moments designed to bring people together."
                     buttonText="Get to know us"
                 />
             </div>
@@ -23,6 +25,7 @@ const About = () => {
                     className="w-[400px] object-contain rounded-2xl"
                 />
             </div>
+            <TornDivider dividerImage={divider}/>
         </section>
     )
 };

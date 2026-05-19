@@ -1,9 +1,11 @@
 
-import divider4 from '@/app/torndivider4.png'
-import divider5 from '@/app/torndivider5.png'
-import Image from 'next/image'
+import Image, {StaticImageData} from 'next/image'
 
-const TornDivider = () => {
+interface Prop {
+    dividerImage: StaticImageData
+}
+
+const TornDivider = ({dividerImage}: Prop) => {
     return (
         <div
             className="
@@ -14,16 +16,17 @@ const TornDivider = () => {
         leading-none
         pointer-events-none
         h-[90px]
-        bottom-[-44px]
+        bottom-[-40px]
     "
         >
             <Image
-                src={divider4}
+                src={dividerImage}
                 alt="Torn divider"
                 className="
+                block
                 z-30
             w-full
-            h-[95px]
+            h-[100px]
             object-fill
         "
             />

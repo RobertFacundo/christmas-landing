@@ -2,6 +2,7 @@ import Image from "next/image"
 import heroBackground from '@/app/heroBackground.jpg'
 import SectionContent from "@/shared/components/SectionContent";
 import TornDivider from "@/shared/components/TornDivider";
+import divider46 from '@/app/59.png'
 
 const Background = () => {
   return (
@@ -46,7 +47,7 @@ const Background = () => {
           buttonText="See Collection"
         />
       </div>
-      <TornDivider />
+      <TornDivider dividerImage={divider46}/>
     </section>
   )
 };
