@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import {
-  Playfair_Display,Merriweather
+  Playfair_Display, Merriweather
 } from "next/font/google";
 import "./globals.css";
+import SmoothScrollProvider from "@/shared/components/SmoothScrollProvider";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -24,13 +25,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html
       lang="en"
       className={` ${playfair.variable}
         ${merri.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SmoothScrollProvider>
+          {children}
+        </SmoothScrollProvider>
+      </body>
     </html>
   );
 }

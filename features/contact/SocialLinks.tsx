@@ -2,7 +2,7 @@ import { socialLinks } from "@/shared/constants/socialLinks";
 
 const SocialLinks = () => {
     return (
-        <div className="relative z-10 flex flex-wrap items-center justify-center gap-6 pb-8">
+        <div className="social-link  relative z-10 flex flex-wrap items-center justify-center gap-6 pb-8">
             {socialLinks.map((item) => {
                 const Icon = item.icon;
 

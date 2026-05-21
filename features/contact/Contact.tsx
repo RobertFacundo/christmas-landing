@@ -1,21 +1,40 @@
+"use client"
 import ContactContent from "./ContactContent";
 import SocialLinks from "./SocialLinks";
 import Image from "next/image";
-import backgroundImage from '@/app/9.png'
+import backgroundImage from '@/shared/assets/9.png'
+import useContactAnimation from "./hooks/useContactAnimation";
+import { useRef } from "react";
 
 const Contact = () => {
+    const container = useRef<HTMLDivElement>(null)
+    useContactAnimation(container);
+
     return (
         <section
+            ref={container}
             id="contact"
-            className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#471212] via-[#481313] to-[#471212]"
+            className="relative min-h-screen overflow-visible bg-gradient-to-br from-[#471212] via-[#481313] to-[#471212]"
         >
             <Image
                 src={backgroundImage}
                 alt="paper texture"
-                fill
-                className="object-contain mt-10 pointer-events-none"
+                width={1400}
+                height={1400}
+                className="
+        absolute
+        left-1/2
+        top-1/2
+        -translate-x-1/2
+        -translate-y-1/2
+        h-[100%]
+        w-auto
+        max-w-none
+        pointer-events-none
+        overflow-visible
+    "
             />
-            <div className="relative z-10 flex flex-col items-center justify-center min-h-screen gap-16">
+            <div className="contact-container relative z-10 flex flex-col items-center justify-center min-h-screen gap-16">
                 <ContactContent />
                 <SocialLinks />
             </div>

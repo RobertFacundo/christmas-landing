@@ -1,12 +1,18 @@
+"use client"
 import Image from "next/image"
-import heroBackground from '@/app/heroBackground.jpg'
+import heroBackground from '@/shared/assets/heroBackground.jpg'
 import SectionContent from "@/shared/components/SectionContent";
 import TornDivider from "@/shared/components/TornDivider";
-import divider46 from '@/app/59.png'
+import divider46 from '@/shared/assets/59.png'
+import useHeroAnimation from "../hooks/useHeroAnimation";
+import { useRef } from "react";
 
 const Background = () => {
+  const container = useRef<HTMLElement>(null);
+  useHeroAnimation(container);
   return (
     <section
+    ref={container}
       id="home"
       className="relative min-h-screen w-full overflow-visible"
     >
@@ -28,7 +34,8 @@ const Background = () => {
           absolute
           inset-y-0
           left-0
-          w-[80%]
+          md:w-[80%]
+          w-[97%]
           bg-gradient-to-r
           from-[#2a0909]
           via-[#4c0a0a]/90
@@ -45,9 +52,10 @@ const Background = () => {
                 cozy winter essentials, and timeless holiday gifts
                 crafted to make every celebration unforgettable.  "
           buttonText="See Collection"
+          className="min-h-screen"
         />
       </div>
-      <TornDivider dividerImage={divider46}/>
+      <TornDivider dividerImage={divider46} />
     </section>
   )
 };

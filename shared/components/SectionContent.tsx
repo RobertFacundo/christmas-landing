@@ -1,34 +1,38 @@
+
 type SectionContentProps = {
     tag: string;
     title: string;
     description: string;
     buttonText: string;
+    className?: string;
 };
 
 const SectionContent = ({
     tag,
     title,
     description,
-    buttonText
+    buttonText,
+    className
 }: SectionContentProps) => {
+
     return (
         <div
-            className="relative z-10 flex min-h-screen max-w-[650px]
-            flex-col justify-center gap-10 px-8 md:px-20 text-white"
+            className={`relative z-10 flex ${className}  md:max-w-[650px] max-w-[450px]
+            flex-col justify-center md:gap-10 gap-6 px-8 md:px-20 md:ml-3 ml-10 text-white`}
         >
-            <span className="tracking-[0.3em] uppercase text-sm text-red-300">
+            <span className="section-tag  tracking-[0.3em] uppercase text-sm text-red-300">
                 {tag}
             </span>
 
             <h1
-                className="font-[family-name:var(--font-heading)]
+                className="section-title font-[family-name:var(--font-heading)]
                 text-5xl leading-tight md:text-7xl"
             >
                 {title}
             </h1>
 
             <p
-                className="max-w-[500px] text-base leading-relaxed
+                className=" section-description max-w-[500px] text-base leading-relaxed
                 text-gray-300 md:text-lg
                 font-[family-name:var(--font-body)]
                 tracking-wider"
@@ -36,7 +40,7 @@ const SectionContent = ({
                 {description}
             </p>
 
-            <div className="flex gap-4">
+            <div className="section-button-wrapper flex gap-4 section-button-wrapper">
                 <button
                     className="
                     rounded-full border border-white/20
