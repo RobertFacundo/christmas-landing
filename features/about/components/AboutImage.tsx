@@ -3,7 +3,7 @@ import christmasImage from "@/shared/assets/aboutImage.jpg"
 
 const AboutImage = () => {
     return (
-        <div className="about-image absolute right-0 top-1/2 -translate-y-1/2 mr-15">
+        <div className="about-image absolute right-0 top-1/2 -translate-y-1/2 mr-15 z-10">
             <Image
                 src={christmasImage}
                 alt="christmas image"

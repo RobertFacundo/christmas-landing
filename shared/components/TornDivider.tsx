@@ -12,7 +12,7 @@ const TornDivider = ({dividerImage}: Prop) => {
         absolute
         left-0
         w-full
-        z-30
+        z-1
         leading-none
         pointer-events-none
         h-[90px]

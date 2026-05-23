@@ -1,8 +1,8 @@
-# 🎄 Christmas Landing (WIP)
+# 🎄 Christmas Landing
 
 An immersive Christmas-themed landing page built with Next.js, focused on cinematic scroll-based storytelling, smooth animations, and atmospheric winter visuals.
 
-This project is currently a **work in progress** and will be progressively improved and expanded.
+This project is an evolving experimental landing page focused on cinematic UI and real-time visual effects.
 
 ---
 
@@ -45,40 +45,46 @@ Each section is treated as an independent feature to keep the project clean and 
 - TypeScript  
 - Tailwind CSS  
 - React Icons  
+- WebGL (via Three.js)
 
 ---
 
-## ✨ Features (In Progress)
+## ✨ Features 
 
 - Cinematic scroll-based experience  
 - Smooth transitions between sections  
 - Modular feature architecture  
-- Snow / winter atmosphere (planned)  
-- GSAP animations (planned)  
-- Scroll-based effects (planned)  
+- Real-time snowfall system (Three.js particles)
+- Interactive cinematic background layer
+- Layered visual composition (UI + WebGL canvas) 
+- Scroll-based effects  
 - Responsive design  
 
 ---
 
-## 🧩 Architecture Notes
+## ✨ Visual Systems
 
-The project follows a feature-based structure to keep logic separated and scalable.
+- Custom Snow particle system built with Three.js
+- GPU-based instanced rendering (PointsMaterial)
+- Procedural wind simulation using sin(time)
+- Infinite loop snowfall with world bounds reset
+- Optimized WebGL canvas overlay
 
-Each section is isolated as its own module, making it easier to maintain and extend over time.
+
+## 🧩 Snow Effect Architecture
+
+The project is structured using a feature-based modular architecture:
+
+- useThreeRenderer → initializes WebGL context (scene, camera, renderer)
+- useSnowParticles → particle system generation
+- useSnowAnimation → simulation loop & physics
+- UI features isolated per section (Hero, Gallery, Contact)
+
+👉 This separation allows visual systems to scale independently from UI components.
 
 ---
 
-## 🚧 Work in Progress
-
-This project is still evolving. Future improvements include:
-
-- Animation system integration  
-- Snowfall / atmospheric effects  
-- Section transitions and dividers  
-- Performance optimizations  
-- UI polishing and micro-interactions  
-
----
+This project explores the separation between UI composition and real-time visual simulation, allowing both systems to evolve independently while sharing a unified cinematic experience.
 
 ## 📬 Contact
 

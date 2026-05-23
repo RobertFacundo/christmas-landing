@@ -34,7 +34,7 @@ const Contact = () => {
         overflow-visible
     "
             />
-            <div className="contact-container relative z-10 flex flex-col items-center justify-center min-h-screen gap-16">
+            <div className="contact-container relative z-10 flex flex-col items-center justify-center min-h-screen gap-16 z-50">
                 <ContactContent />
                 <SocialLinks />
             </div>

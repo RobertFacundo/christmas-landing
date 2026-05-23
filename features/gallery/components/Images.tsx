@@ -9,7 +9,7 @@ const Images = () => {
             {galleryImages.map((image) => (
                 <div
                     key={image.alt}
-                    className="gallery-image overflow-hidden rounded-xl"
+                    className="gallery-image overflow-hidden rounded-xl z-50"
                 >
                     <Image
                         src={image.src}
@@ -17,7 +17,7 @@ const Images = () => {
                         width={300}
                         height={420}
                         sizes="(max-width: 768px) 220px, 300px"
-                        className="object-cover transition-transform duration-500 hover:scale-105"
+                        className="object-cover transition-transform duration-500 hover:scale-105 z-50"
                     />
                 </div>
             ))}
